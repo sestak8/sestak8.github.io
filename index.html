@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jiří Šesták</title>
+  <meta name="description" content="Osobní stránka Jiřího Šestáka.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1c1e;
+      --muted: #6b6b70;
+      --line: #e4e4e2;
+      --accent: #2456d6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141416;
+        --text: #ececef;
+        --muted: #9a9aa2;
+        --line: #2a2a2e;
+        --accent: #7aa2ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+    main { max-width: 520px; width: 100%; }
+    h1 { font-size: clamp(2rem, 6vw, 2.75rem); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+    p.lead { color: var(--muted); font-size: 1.125rem; margin: 0 0 40px; }
+    ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+    li { border-bottom: 1px solid var(--line); }
+    li a {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 16px 0; color: var(--text); text-decoration: none; font-weight: 500;
+    }
+    li a span { color: var(--muted); font-weight: 400; font-size: 0.95rem; }
+    li a:hover { color: var(--accent); }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Jiří Šesták</h1>
+    <p class="lead">Vítejte na mé osobní stránce. Další obsah brzy přibude.</p>
+
+    <ul>
+      <li>
+        <a href="https://www.florbaljivova.cz">
+          Florbalový turnaj Jívová
+          <span>florbaljivova.cz →</span>
+        </a>
+      </li>
+      <li>
+        <!-- DOPLNIT: skutečný e-mail -->
+        <a href="mailto:jiri@jirisestak.com">
+          E-mail
+          <span>jiri@jirisestak.com</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>© 2026 Jiří Šesták</footer>
+  </main>
+</body>
+</html>
