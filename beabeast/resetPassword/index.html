@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; connect-src https://zwbaziqhcgikylvqmqrf.supabase.co; img-src 'self' data:; form-action 'none'; base-uri 'none'">
+  <title>Reset password · Be a Beast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Be a Beast</h1>
+
+    <p id="notice" class="notice" role="alert" hidden></p>
+
+    <!-- A) Request a reset link -->
+    <section id="view-request" hidden>
+      <h2>Reset your password</h2>
+      <p class="muted">Enter the email you use to sign in. We'll send you a link to set a new password.</p>
+      <form id="form-request" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        <p id="request-error" class="field-error" hidden></p>
+        <button type="submit">Send reset link</button>
+      </form>
+    </section>
+
+    <!-- A) After submitting -->
+    <section id="view-sent" hidden>
+      <h2>Check your email</h2>
+      <p>If there's an account for this email, a link is on its way.</p>
+      <p class="muted">The link works once and expires after a while. Didn't get it? Check your spam folder, or <a href="./" id="link-again">try again</a>.</p>
+    </section>
+
+    <!-- B) Opened from the email link -->
+    <section id="view-new" hidden>
+      <h2>Choose a new password</h2>
+      <form id="form-new" novalidate>
+        <input id="username" name="username" type="email" autocomplete="username" hidden>
+        <label for="password">New password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <label for="password2">Repeat new password</label>
+        <input id="password2" name="password2" type="password" autocomplete="new-password" minlength="8" required>
+        <label class="check"><input id="show" type="checkbox"> Show passwords</label>
+        <p class="muted small">At least 8 characters.</p>
+        <p id="new-error" class="field-error" hidden></p>
+        <button type="submit">Change password</button>
+      </form>
+    </section>
+
+    <!-- B) Done -->
+    <section id="view-done" hidden>
+      <h2>Password changed</h2>
+      <p>Your password is changed. Go back to the Be a Beast app and sign in.</p>
+    </section>
+
+    <!-- Loading / not configured -->
+    <section id="view-loading">
+      <p class="muted">Loading…</p>
+    </section>
+
+    <noscript><p>This page needs JavaScript to reset your password.</p></noscript>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js"
+          integrity="sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R"
+          crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+:root {
+  --bg: #f4f4f5;
+  --card: #ffffff;
+  --text: #18181b;
+  --muted: #6b6b73;
+  --line: #d9d9de;
+  --accent: #18181b;
+  --accent-text: #ffffff;
+  --error: #b42318;
+  --error-bg: #fdecea;
+  --info-bg: #eef2ff;
+  --info-text: #2b3a8c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f11;
+    --card: #1a1a1d;
+    --text: #ededf0;
+    --muted: #a0a0a8;
+    --line: #33333a;
+    --accent: #ededf0;
+    --accent-text: #111113;
+    --error: #ff8a80;
+    --error-bg: #3a1a18;
+    --info-bg: #1c2340;
+    --info-text: #b8c4ff;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+}
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 24px;
+}
+h1 { font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+h2 { font-size: 1.4rem; margin: 0 0 8px; line-height: 1.25; }
+p { margin: 0 0 16px; }
+.muted { color: var(--muted); }
+.small { font-size: 0.875rem; margin-top: 4px; }
+a { color: inherit; }
+
+form { display: flex; flex-direction: column; }
+label { font-weight: 600; font-size: 0.9rem; margin: 12px 0 6px; }
+label.check { font-weight: 400; display: flex; gap: 8px; align-items: center; margin-top: 12px; }
+input[type=email], input[type=password], input[type=text] {
+  font: inherit;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  width: 100%;
+}
+input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+button {
+  font: inherit;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: default; }
+
+.notice { padding: 12px 14px; border-radius: 10px; background: var(--info-bg); color: var(--info-text); }
+.notice.error { background: var(--error-bg); color: var(--error); }
+.field-error { color: var(--error); margin: 12px 0 0; font-size: 0.9rem; }
+[hidden] { display: none !important; }
