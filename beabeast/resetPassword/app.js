@@ -4,7 +4,7 @@
 
   var SUPABASE_URL = 'https://zwbaziqhcgikylvqmqrf.supabase.co';
   // Publishable key: public by design. Never put the secret key or DB password here.
-  var SUPABASE_PUBLISHABLE_KEY = 'PASTE_PUBLISHABLE_KEY_HERE';
+  var SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ej-XtrCrxmzjShykfppmjw_t6FbfEXD';
   // Must match exactly, and must be listed in Supabase → Authentication → URL Configuration → Redirect URLs.
   var REDIRECT_URL = 'https://www.jirisestak.com/beabeast/resetPassword/';
 
